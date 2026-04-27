@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[Your Name] — EE @ Brown</title>
+    <title>Margeaux Corrigan — EE @ Brown</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -15,7 +15,7 @@
     <header>
         <nav>
             <div class="nav-container">
-                <div class="logo">[XX]</div>
+                <div class="logo">MC</div>
                 <button class="menu-toggle" aria-label="Toggle menu">
                     <span></span>
                     <span></span>
@@ -37,21 +37,22 @@
         <section id="hero" class="hero">
             <div class="hero-content">
                 <p class="hero-eyebrow">hi, I'm</p>
-                <h1 class="hero-name">[Your Name]</h1>
+                <h1 class="hero-name">Margeaux Corrigan</h1>
                 <p class="hero-tagline">
                     Electrical engineering student at Brown — I build embedded systems from the register level up.
                 </p>
                 <p class="hero-bio">
-                    I work on systems where hardware and software meet: from flight computers on rocket payloads
-                    to bare-metal peripheral drivers on microcontrollers. I care about writing code that maps
-                    cleanly to the silicon it runs on — no abstraction layers hiding the interesting parts.
-                    Outside of engineering, [one human detail — e.g. "I make pour-over coffee and lose at chess"].
+                    I work at the intersection of hardware and software: writing bare-metal Ada firmware for STM32
+                    microcontrollers at AdaCore, leading avionics on Brown Rocketry's IREC-accepted rocket, and
+                    joining Brown's Interactive 3D Vision &amp; Learning Lab this summer to work on multi-camera
+                    capture systems in C++. I care about code that maps cleanly to the silicon it runs on —
+                    no HAL abstractions hiding the interesting parts.
                 </p>
                 <div class="hero-links">
                     <a href="[linkedin-url]" target="_blank" class="btn-outline">LinkedIn</a>
-                    <a href="[github-url]" target="_blank" class="btn-outline">GitHub</a>
+                    <a href="https://github.com/MargXX" target="_blank" class="btn-outline">GitHub</a>
                     <a href="images/resume.pdf" target="_blank" class="btn-primary">Resume ↓</a>
-                    <a href="mailto:[your@email.com]" class="btn-outline">Email</a>
+                    <a href="mailto:margeauxcorrigan@gmail.com" class="btn-outline">Email</a>
                 </div>
             </div>
         </section>
@@ -62,48 +63,48 @@
                 <h2>Projects</h2>
                 <div class="projects-grid">
 
-                    <!-- ROCKET PAYLOAD -->
+                    <!-- ROCKET PAYLOAD SENSOR SYSTEM -->
                     <div class="project-card">
                         <div class="project-thumb">
-                            <img src="images/rocket-payload.jpg" alt="Rocket Payload" class="thumb-img" onerror="this.style.display='none'">
+                            <img src="images/rocket-payload.jpg" alt="Rocket Payload Sensor System" class="thumb-img" onerror="this.style.display='none'">
                         </div>
                         <div class="project-info">
                             <div class="project-header">
-                                <h3>Rocket Payload</h3>
-                                <span class="badge badge-inprogress">In Progress</span>
+                                <h3>Rocket Payload Sensor System</h3>
+                                <span class="badge badge-complete">Complete</span>
                             </div>
-                            <p>Flight computer for Brown Rocketry's high-power rocket — sensor acquisition, telemetry logging, and pyro-channel firing sequences on bare-metal RP2040.</p>
+                            <p>Bare-metal Ada firmware for an RP2040-based multi-sensor rocket payload, mentored by AdaCore. Deployed on a live high-power launch — firmware logged continuously under real G-loads. Integrated SHT3x, BMP390, and LSM9DS1 over I2C at 100 Hz; implemented W25Q128 SPI flash for onboard data logging.</p>
                             <div class="project-tags">
                                 <span class="tag">RP2040</span>
                                 <span class="tag">Ada</span>
-                                <span class="tag">C</span>
-                                <span class="tag">SPI</span>
                                 <span class="tag">I2C</span>
+                                <span class="tag">SPI</span>
                                 <span class="tag">UART</span>
+                                <span class="tag">W25Q128</span>
                             </div>
                             <a href="#" class="btn-secondary">GitHub — coming soon</a>
                         </div>
                     </div>
 
-                    <!-- ARDUINO FAN -->
+                    <!-- TEMPERATURE-CONTROLLED FAN -->
                     <div class="project-card">
                         <div class="project-thumb">
-                            <img src="images/arduino-fan.jpg" alt="Arduino Fan Controller" class="thumb-img" onerror="this.style.display='none'">
+                            <img src="images/arduino-fan.jpg" alt="Temperature-Controlled Fan with LED Display" class="thumb-img" onerror="this.style.display='none'">
                         </div>
                         <div class="project-info">
                             <div class="project-header">
-                                <h3>Arduino Fan Controller</h3>
+                                <h3>Temperature-Controlled Fan</h3>
                                 <span class="badge badge-complete">Complete</span>
                             </div>
-                            <p>Closed-loop PWM fan controller with tachometer feedback and PID speed regulation — configured directly in ATmega328P hardware registers, no Arduino library abstractions.</p>
+                            <p>Embedded system that reads a temperature sensor and drives a fan and LED display via Arduino firmware. Built and debugged the full hardware circuit integrating sensor, display module, and microcontroller control logic.</p>
                             <div class="project-tags">
-                                <span class="tag">ATmega328P</span>
-                                <span class="tag">C</span>
+                                <span class="tag">Arduino</span>
+                                <span class="tag">C++</span>
                                 <span class="tag">PWM</span>
-                                <span class="tag">PID</span>
-                                <span class="tag">Timers</span>
+                                <span class="tag">Temperature Sensor</span>
+                                <span class="tag">LED Display</span>
                             </div>
-                            <a href="[github-url]" target="_blank" class="btn-secondary">View on GitHub</a>
+                            <a href="#" class="btn-secondary">GitHub — coming soon</a>
                         </div>
                     </div>
 
@@ -120,15 +121,15 @@
                             <p>Automated boba tea dispenser — stepper-driven pump, solenoid valves, and a touchscreen order interface, all coordinated by a bare-metal RP2040.</p>
                             <div class="project-tags">
                                 <span class="tag">RP2040</span>
-                                <span class="tag">MicroPython</span>
                                 <span class="tag">Stepper Motors</span>
                                 <span class="tag">Solenoids</span>
+                                <span class="tag">Bare-metal</span>
                             </div>
                             <a href="#" class="btn-secondary">GitHub — coming soon</a>
                         </div>
                     </div>
 
-                    <!-- ADD NEW CARDS HERE — copy the block above and update fields -->
+                    <!-- ADD NEW CARDS HERE — copy a block above, update the fields -->
 
                 </div>
             </div>
@@ -145,34 +146,50 @@
                 <div class="timeline">
 
                     <div class="timeline-item">
-                        <div class="timeline-date">Summer 2025</div>
+                        <div class="timeline-date">Summer 2026</div>
                         <div class="timeline-content">
-                            <h3>AdaCore <span class="role">— Engineering Intern</span></h3>
-                            <p>[What you worked on — 1–2 sentences.]</p>
+                            <h3>IVL Lab, Brown University <span class="role">— Paid Researcher</span></h3>
+                            <p>Investigating multi-camera capture and calibration systems using C++ and embedded hardware, advised by Prof. Srinath Sridhar. Funded by the Brown UTRA Research Award.</p>
                         </div>
                     </div>
 
                     <div class="timeline-item">
-                        <div class="timeline-date">2024 — Present</div>
+                        <div class="timeline-date">Apr 2026 — Present</div>
                         <div class="timeline-content">
-                            <h3>Brown Rocketry <span class="role">— Avionics</span></h3>
-                            <p>[e.g. Designing the flight computer, writing low-level drivers, etc.]</p>
+                            <h3>AdaCore <span class="role">— Technical Mentorship</span></h3>
+                            <p>Developing bare-metal Ada firmware for STM32G431 at the register level (RM0440/SVD), without HAL abstraction. Built working toolchain from scratch (Alire, OpenOCD, CMSIS-DAP); parsed ARM SVD/XML to map peripheral registers into Ada drivers.</p>
                         </div>
                     </div>
 
                     <div class="timeline-item">
-                        <div class="timeline-date">2023 — 2024</div>
+                        <div class="timeline-date">Sep 2025 — Present</div>
                         <div class="timeline-content">
-                            <h3>UTRA <span class="role">— [Your Role]</span></h3>
-                            <p>[Brief description.]</p>
+                            <h3>Brown Rocketry <span class="role">— Avionics Team Lead</span></h3>
+                            <p>Sole avionics developer on the payload that earned Brown Rocketry's first-ever IREC acceptance. Designed the full electrical architecture, wiring diagrams, and power distribution; performed FEA on avionics bay components; secured annual industry sponsorship.</p>
                         </div>
                     </div>
 
                     <div class="timeline-item">
-                        <div class="timeline-date">2023</div>
+                        <div class="timeline-date">Sep 2025 — Present</div>
                         <div class="timeline-content">
-                            <h3>Persistence Labs <span class="role">— [Your Role]</span></h3>
-                            <p>[Brief description.]</p>
+                            <h3>Brown Space Engineering <span class="role">— Antenna Team</span></h3>
+                            <p>Leading antenna specification for the communications subsystem, including Nitinol dipole and copper patch designs. Establishing feed architecture, impedance matching strategy, and EMC constraints.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">May 2024 — Oct 2025</div>
+                        <div class="timeline-content">
+                            <h3>Persistence Labs <span class="role">— Strategy Intern</span></h3>
+                            <p>Facilitated beta testing across 10+ iterations with high school control groups; synthesized findings into reports presented to the founder/CEO to guide UI and product decisions.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">May 2024 — Sep 2025</div>
+                        <div class="timeline-content">
+                            <h3>Project Amplify <span class="role">— Founder &amp; Director</span></h3>
+                            <p>Founded a summer AI literacy program across 3+ school districts. Designed and taught curriculum from scratch — students trained image recognition models in Python using Pandas and NumPy. Awarded the Taco Bell Ambition Accelerator Grant.</p>
                         </div>
                     </div>
 
@@ -190,17 +207,17 @@
                     Always happy to talk embedded systems, rockets, or weird side projects.
                 </p>
                 <div class="contact-links">
-                    <a href="mailto:[your@email.com]" class="contact-item">
+                    <a href="mailto:margeauxcorrigan@gmail.com" class="contact-item">
                         <span class="contact-label">Email</span>
-                        <span class="contact-value">[your@email.com]</span>
+                        <span class="contact-value">margeauxcorrigan@gmail.com</span>
                     </a>
                     <a href="[linkedin-url]" target="_blank" class="contact-item">
                         <span class="contact-label">LinkedIn</span>
                         <span class="contact-value">linkedin.com/in/[your-name]</span>
                     </a>
-                    <a href="[github-url]" target="_blank" class="contact-item">
+                    <a href="https://github.com/MargXX" target="_blank" class="contact-item">
                         <span class="contact-label">GitHub</span>
-                        <span class="contact-value">github.com/[your-username]</span>
+                        <span class="contact-value">github.com/MargXX</span>
                     </a>
                 </div>
             </div>
@@ -210,7 +227,7 @@
 
     <footer>
         <div class="container">
-            <p>[Your Name] &middot; Brown University EE &middot; 2026</p>
+            <p>Margeaux Corrigan &middot; Brown University EE &middot; 2026</p>
         </div>
     </footer>
 
