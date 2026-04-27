@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Your Name] — EE @ Brown</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">[XX]</div>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ═══ HERO / ABOUT ═══ -->
+        <section id="hero" class="hero">
+            <div class="hero-content">
+                <p class="hero-eyebrow">hi, I'm</p>
+                <h1 class="hero-name">[Your Name]</h1>
+                <p class="hero-tagline">
+                    Electrical engineering student at Brown — I build embedded systems from the register level up.
+                </p>
+                <p class="hero-bio">
+                    I work on systems where hardware and software meet: from flight computers on rocket payloads
+                    to bare-metal peripheral drivers on microcontrollers. I care about writing code that maps
+                    cleanly to the silicon it runs on — no abstraction layers hiding the interesting parts.
+                    Outside of engineering, [one human detail — e.g. "I make pour-over coffee and lose at chess"].
+                </p>
+                <div class="hero-links">
+                    <a href="[linkedin-url]" target="_blank" class="btn-outline">LinkedIn</a>
+                    <a href="[github-url]" target="_blank" class="btn-outline">GitHub</a>
+                    <a href="images/resume.pdf" target="_blank" class="btn-primary">Resume ↓</a>
+                    <a href="mailto:[your@email.com]" class="btn-outline">Email</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ PROJECTS ═══ -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2>Projects</h2>
+                <div class="projects-grid">
+
+                    <!-- ROCKET PAYLOAD -->
+                    <div class="project-card">
+                        <div class="project-thumb">
+                            <img src="images/rocket-payload.jpg" alt="Rocket Payload" class="thumb-img" onerror="this.style.display='none'">
+                        </div>
+                        <div class="project-info">
+                            <div class="project-header">
+                                <h3>Rocket Payload</h3>
+                                <span class="badge badge-inprogress">In Progress</span>
+                            </div>
+                            <p>Flight computer for Brown Rocketry's high-power rocket — sensor acquisition, telemetry logging, and pyro-channel firing sequences on bare-metal RP2040.</p>
+                            <div class="project-tags">
+                                <span class="tag">RP2040</span>
+                                <span class="tag">Ada</span>
+                                <span class="tag">C</span>
+                                <span class="tag">SPI</span>
+                                <span class="tag">I2C</span>
+                                <span class="tag">UART</span>
+                            </div>
+                            <a href="#" class="btn-secondary">GitHub — coming soon</a>
+                        </div>
+                    </div>
+
+                    <!-- ARDUINO FAN -->
+                    <div class="project-card">
+                        <div class="project-thumb">
+                            <img src="images/arduino-fan.jpg" alt="Arduino Fan Controller" class="thumb-img" onerror="this.style.display='none'">
+                        </div>
+                        <div class="project-info">
+                            <div class="project-header">
+                                <h3>Arduino Fan Controller</h3>
+                                <span class="badge badge-complete">Complete</span>
+                            </div>
+                            <p>Closed-loop PWM fan controller with tachometer feedback and PID speed regulation — configured directly in ATmega328P hardware registers, no Arduino library abstractions.</p>
+                            <div class="project-tags">
+                                <span class="tag">ATmega328P</span>
+                                <span class="tag">C</span>
+                                <span class="tag">PWM</span>
+                                <span class="tag">PID</span>
+                                <span class="tag">Timers</span>
+                            </div>
+                            <a href="[github-url]" target="_blank" class="btn-secondary">View on GitHub</a>
+                        </div>
+                    </div>
+
+                    <!-- BOBA MACHINE -->
+                    <div class="project-card">
+                        <div class="project-thumb">
+                            <img src="images/boba-machine.jpg" alt="Boba Machine" class="thumb-img" onerror="this.style.display='none'">
+                        </div>
+                        <div class="project-info">
+                            <div class="project-header">
+                                <h3>Boba Machine</h3>
+                                <span class="badge badge-planned">Planned</span>
+                            </div>
+                            <p>Automated boba tea dispenser — stepper-driven pump, solenoid valves, and a touchscreen order interface, all coordinated by a bare-metal RP2040.</p>
+                            <div class="project-tags">
+                                <span class="tag">RP2040</span>
+                                <span class="tag">MicroPython</span>
+                                <span class="tag">Stepper Motors</span>
+                                <span class="tag">Solenoids</span>
+                            </div>
+                            <a href="#" class="btn-secondary">GitHub — coming soon</a>
+                        </div>
+                    </div>
+
+                    <!-- ADD NEW CARDS HERE — copy the block above and update fields -->
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ EXPERIENCE ═══ -->
+        <section id="experience" class="experience">
+            <div class="container">
+                <h2>Experience</h2>
+                <p class="section-sub">
+                    Quick timeline — <a href="images/resume.pdf" target="_blank" class="inline-link">full resume here ↓</a>
+                </p>
+
+                <div class="timeline">
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">Summer 2025</div>
+                        <div class="timeline-content">
+                            <h3>AdaCore <span class="role">— Engineering Intern</span></h3>
+                            <p>[What you worked on — 1–2 sentences.]</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">2024 — Present</div>
+                        <div class="timeline-content">
+                            <h3>Brown Rocketry <span class="role">— Avionics</span></h3>
+                            <p>[e.g. Designing the flight computer, writing low-level drivers, etc.]</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">2023 — 2024</div>
+                        <div class="timeline-content">
+                            <h3>UTRA <span class="role">— [Your Role]</span></h3>
+                            <p>[Brief description.]</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">2023</div>
+                        <div class="timeline-content">
+                            <h3>Persistence Labs <span class="role">— [Your Role]</span></h3>
+                            <p>[Brief description.]</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <a href="images/resume.pdf" target="_blank" class="btn-primary">Download Resume ↓</a>
+            </div>
+        </section>
+
+        <!-- ═══ CONTACT ═══ -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Contact</h2>
+                <p class="contact-sub">
+                    Always happy to talk embedded systems, rockets, or weird side projects.
+                </p>
+                <div class="contact-links">
+                    <a href="mailto:[your@email.com]" class="contact-item">
+                        <span class="contact-label">Email</span>
+                        <span class="contact-value">[your@email.com]</span>
+                    </a>
+                    <a href="[linkedin-url]" target="_blank" class="contact-item">
+                        <span class="contact-label">LinkedIn</span>
+                        <span class="contact-value">linkedin.com/in/[your-name]</span>
+                    </a>
+                    <a href="[github-url]" target="_blank" class="contact-item">
+                        <span class="contact-label">GitHub</span>
+                        <span class="contact-value">github.com/[your-username]</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>[Your Name] &middot; Brown University EE &middot; 2026</p>
+        </div>
+    </footer>
+
+</body>
+</html>
