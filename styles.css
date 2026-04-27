@@ -233,6 +233,12 @@ header {
     color: var(--accent);
 }
 
+.btn-disabled {
+    opacity: 0.45;
+    cursor: default;
+    pointer-events: none;
+}
+
 /* =============================================
    SECTION SHARED STYLES
    ============================================= */
