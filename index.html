@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Margeaux Corrigan — EE @ Brown</title>
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Margeaux Corrigan — EE @ Brown">
+    <meta property="og:description" content="Electrical engineering student at Brown building embedded systems from the register level up. Avionics lead on Brown Rocketry's IREC rocket; bare-metal Ada firmware at AdaCore.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/Rocket_Payload_Final_Programming.jpeg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Margeaux Corrigan — EE @ Brown">
+    <meta name="twitter:description" content="Electrical engineering student at Brown building embedded systems from the register level up.">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -51,7 +61,7 @@
                 <div class="hero-links">
                     <a href="https://www.linkedin.com/in/margeaux-c-559142303/" target="_blank" class="btn-outline">LinkedIn</a>
                     <a href="https://github.com/MargXX" target="_blank" class="btn-outline">GitHub</a>
-                    <a href="images/resume.pdf" target="_blank" class="btn-primary">Resume ↓</a>
+                    <a href="resume.pdf" target="_blank" class="btn-primary">Resume ↓</a>
                     <a href="mailto:margeaux_corrigan@brown.edu" class="btn-outline">Email</a>
                 </div>
             </div>
@@ -66,7 +76,7 @@
                     <!-- ROCKET PAYLOAD SENSOR SYSTEM -->
                     <div class="project-card">
                         <div class="project-thumb">
-                            <img src="images/Rocket_Payload_Final_Programming.jpeg" alt="Rocket Payload Sensor System" class="thumb-img" onerror="this.style.display='none'">
+                            <img src="images/Rocket_Payload_Final_Programming.jpeg" alt="Rocket payload board with sensors mounted, photographed during final pre-launch programming session" class="thumb-img" onerror="this.style.display='none'">
                         </div>
                         <div class="project-info">
                             <div class="project-header">
@@ -79,17 +89,58 @@
                                 <span class="tag">Ada</span>
                                 <span class="tag">I2C</span>
                                 <span class="tag">SPI</span>
-                                <span class="tag">UART</span>
-                                <span class="tag">W25Q128</span>
                             </div>
                             <a href="https://github.com/Brown-Rocketry/IREC-2025-2026/tree/main/terrarium_pico" target="_blank" class="btn-secondary">View on GitHub</a>
+                        </div>
+                    </div>
+
+                    <!-- FLIGHT COMPUTER -->
+                    <div class="project-card">
+                        <div class="project-thumb">
+                            <img src="images/flight_computer_placeholder.jpg" alt="Flight computer PCB layout in KiCad" class="thumb-img" onerror="this.style.display='none'">
+                        </div>
+                        <div class="project-info">
+                            <div class="project-header">
+                                <h3>Flight Computer</h3>
+                                <span class="badge badge-inprogress">In Progress</span>
+                            </div>
+                            <p>Bare-metal peripheral drivers in C — I2C, UART, GPIO, and SysTick — then a device driver for the LSM9DS1 IMU (open-sourced). PCB designed in KiCad, consolidating the payload's individual breakout boards into a unified layout. Pyrotechnic output control for deployment charges is in scope; the driver layer is being written to stand alone as a reusable open-source library.</p>
+                            <div class="project-tags">
+                                <span class="tag">C</span>
+                                <span class="tag">I2C</span>
+                                <span class="tag">UART</span>
+                                <span class="tag">KiCad</span>
+                            </div>
+                            <span class="btn-secondary btn-disabled">Coming to GitHub</span>
+                        </div>
+                    </div>
+
+                    <!-- BOBA MACHINE -->
+                    <div class="project-card">
+                        <div class="project-thumb">
+                            <img src="images/Boba_Machine_CAD_Prototype.png" alt="CAD prototype of the boba machine dispensing mechanism showing servo-controlled valve layout" class="thumb-img" onerror="this.style.display='none'">
+                        </div>
+                        <div class="project-info">
+                            <div class="project-header">
+                                <h3>Boba Machine</h3>
+                                <span class="badge badge-inprogress">In Progress</span>
+                            </div>
+                            <p>ESP32-driven boba dispenser: the firmware manages a servo control loop that holds each valve open precisely long enough to dispense the correct ingredient volume. Students order via a Wi-Fi web interface and rate their drink 1–5; a gradient descent optimizer runs server-side, learning from ratings to tune ingredient ratios over time.</p>
+                            <div class="project-tags">
+                                <span class="tag">ESP32</span>
+                                <span class="tag">Wi-Fi</span>
+                                <span class="tag">Servo Motors</span>
+                                <span class="tag">Web Interface</span>
+                                <span class="tag">Gradient Descent</span>
+                            </div>
+                            <a href="https://github.com/MargXX/Perfect-Boba" target="_blank" class="btn-secondary">View on GitHub</a>
                         </div>
                     </div>
 
                     <!-- TEMPERATURE-CONTROLLED FAN -->
                     <div class="project-card">
                         <div class="project-thumb">
-                            <img src="images/Arduino_Internal_wiring.jpg" alt="Temperature-Controlled Fan with LED Display" class="thumb-img" onerror="this.style.display='none'">
+                            <img src="images/Arduino_Internal_wiring.jpg" alt="Arduino breadboard wiring for temperature-controlled fan showing sensor and display connections" class="thumb-img" onerror="this.style.display='none'">
                         </div>
                         <div class="project-info">
                             <div class="project-header">
@@ -102,36 +153,10 @@
                                 <span class="tag">C++</span>
                                 <span class="tag">PWM</span>
                                 <span class="tag">Temperature Sensor</span>
-                                <span class="tag">LED Display</span>
                             </div>
                             <span class="btn-secondary btn-disabled">No repo</span>
                         </div>
                     </div>
-
-                    <!-- BOBA MACHINE -->
-                    <div class="project-card">
-                        <div class="project-thumb">
-                            <img src="images/Boba_Machine_CAD_Prototype.png" alt="Boba Machine" class="thumb-img" onerror="this.style.display='none'">
-                        </div>
-                        <div class="project-info">
-                            <div class="project-header">
-                                <h3>Boba Machine</h3>
-                                <span class="badge badge-inprogress">In Progress</span>
-                            </div>
-                            <p>Automated boba dispenser controlled by an ESP32 over Wi-Fi. Students order via a web interface, then rate their drink 1–5; a gradient descent model learns from ratings to optimize ingredient ratios over time. The ESP32 drives servo-controlled valves and gates, holding each open precisely long enough to dispense the right amount of each ingredient.</p>
-                            <div class="project-tags">
-                                <span class="tag">ESP32</span>
-                                <span class="tag">Wi-Fi</span>
-                                <span class="tag">Servo Motors</span>
-                                <span class="tag">Gradient Descent</span>
-                                <span class="tag">Web Interface</span>
-                                <span class="tag">Machine Learning</span>
-                            </div>
-                            <a href="https://github.com/MargXX/Perfect-Boba" target="_blank" class="btn-secondary">View on GitHub</a>
-                        </div>
-                    </div>
-
-                    <!-- ADD NEW CARDS HERE — copy a block above, update the fields -->
 
                 </div>
             </div>
@@ -142,7 +167,7 @@
             <div class="container">
                 <h2>Experience</h2>
                 <p class="section-sub">
-                    Quick timeline — <a href="images/resume.pdf" target="_blank" class="inline-link">full resume here ↓</a>
+                    <a href="resume.pdf" target="_blank" class="inline-link">Full resume here ↓</a>
                 </p>
 
                 <div class="timeline">
@@ -166,8 +191,8 @@
                     <div class="timeline-item">
                         <div class="timeline-date">Sep 2025 — Present</div>
                         <div class="timeline-content">
-                            <h3>Brown Rocketry <span class="role">— Avionics Team Lead</span></h3>
-                            <p>Sole avionics developer on the payload that earned Brown Rocketry's first-ever IREC acceptance. Designed the full electrical architecture, wiring diagrams, and power distribution; performed FEA on avionics bay components; secured annual industry sponsorship.</p>
+                            <h3>Brown Rocketry <span class="role">— Lead Avionics Engineer</span></h3>
+                            <p>Led all avionics development for the payload that earned Brown Rocketry's first-ever IREC acceptance. Designed the full electrical architecture, wiring diagrams, and power distribution; performed FEA on avionics bay components; secured annual industry sponsorship.</p>
                         </div>
                     </div>
 
@@ -197,7 +222,7 @@
 
                 </div>
 
-                <a href="images/resume.pdf" target="_blank" class="btn-primary">Download Resume ↓</a>
+                <a href="resume.pdf" target="_blank" class="btn-primary">Download Resume ↓</a>
             </div>
         </section>
 
