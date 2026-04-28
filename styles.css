@@ -135,13 +135,13 @@ header {
 .hero-inner {
     display: flex;
     align-items: center;
-    gap: 2.5rem;
+    gap: 3.5rem;
     width: 100%;
 }
 
 .hero-content {
-    max-width: 580px;
     flex: 1;
+    min-width: 0;
 }
 
 .hero-portrait {
@@ -149,13 +149,13 @@ header {
 }
 
 .hero-portrait img {
-    width: 165px;
-    height: 165px;
+    width: 260px;
+    height: 260px;
     object-fit: cover;
     object-position: center center;
     display: block;
     border: 2px solid var(--accent);
-    box-shadow: 4px 4px 0 var(--border-hover);
+    box-shadow: 5px 5px 0 var(--border-hover);
 }
 
 .hero-eyebrow {
@@ -584,14 +584,14 @@ footer p {
     }
 
     .hero-inner {
-        flex-direction: column-reverse;
-        gap: 2rem;
+        flex-direction: column;
+        gap: 1.5rem;
         align-items: flex-start;
     }
 
     .hero-portrait img {
-        width: 120px;
-        height: 120px;
+        width: 130px;
+        height: 130px;
     }
 
     .container { padding: 0 1.5rem; }
