@@ -150,7 +150,7 @@ header {
 
 .hero-portrait img {
     width: 260px;
-    height: 260px;
+    height: 780px;
     object-fit: cover;
     object-position: center center;
     display: block;
