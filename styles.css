@@ -135,7 +135,7 @@ header {
 .hero-inner {
     display: flex;
     align-items: center;
-    gap: 5rem;
+    gap: 2.5rem;
     width: 100%;
 }
 
@@ -149,13 +149,13 @@ header {
 }
 
 .hero-portrait img {
-    width: 210px;
-    height: 210px;
+    width: 120px;
+    height: 120px;
     object-fit: cover;
     object-position: center top;
     display: block;
     border: 2px solid var(--accent);
-    box-shadow: 6px 6px 0 var(--border-hover);
+    box-shadow: 4px 4px 0 var(--border-hover);
 }
 
 .hero-eyebrow {
@@ -306,7 +306,7 @@ section h2::after {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
     gap: 1.25rem;
 }
 
@@ -371,6 +371,22 @@ section h2::after {
     font-size: 0.9rem;
     color: var(--text-dim);
     line-height: 1.65;
+    max-height: 7em;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent-mid) var(--accent-dim);
+}
+
+.project-info p::-webkit-scrollbar {
+    width: 4px;
+}
+
+.project-info p::-webkit-scrollbar-track {
+    background: var(--accent-dim);
+}
+
+.project-info p::-webkit-scrollbar-thumb {
+    background: var(--accent-mid);
 }
 
 /* status badges */
@@ -574,8 +590,8 @@ footer p {
     }
 
     .hero-portrait img {
-        width: 150px;
-        height: 150px;
+        width: 100px;
+        height: 100px;
     }
 
     .container { padding: 0 1.5rem; }
