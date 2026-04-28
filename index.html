@@ -45,24 +45,29 @@
 
         <!-- ═══ HERO / ABOUT ═══ -->
         <section id="hero" class="hero">
-            <div class="hero-content">
-                <p class="hero-eyebrow">hi, I'm</p>
-                <h1 class="hero-name">Margeaux Corrigan</h1>
-                <p class="hero-tagline">
-                    Electrical engineering student at Brown — I build embedded systems from the register level up.
-                </p>
-                <p class="hero-bio">
-                    I work at the intersection of hardware and software: writing bare-metal Ada firmware for STM32
-                    microcontrollers at AdaCore, leading avionics on Brown Rocketry's IREC-accepted rocket, and
-                    joining Brown's Interactive 3D Vision &amp; Learning Lab this summer to work on multi-camera
-                    capture systems in C++. I care about code that maps cleanly to the silicon it runs on —
-                    no HAL abstractions hiding the interesting parts.
-                </p>
-                <div class="hero-links">
-                    <a href="https://www.linkedin.com/in/margeaux-c-559142303/" target="_blank" class="btn-outline">LinkedIn</a>
-                    <a href="https://github.com/MargXX" target="_blank" class="btn-outline">GitHub</a>
-                    <a href="resume.pdf" target="_blank" class="btn-primary">Resume ↓</a>
-                    <a href="mailto:margeaux_corrigan@brown.edu" class="btn-outline">Email</a>
+            <div class="hero-inner">
+                <div class="hero-content">
+                    <p class="hero-eyebrow">hi, I'm</p>
+                    <h1 class="hero-name">Margeaux Corrigan</h1>
+                    <p class="hero-tagline">
+                        Electrical engineering student at Brown — I build embedded systems from the register level up.
+                    </p>
+                    <p class="hero-bio">
+                        I work at the intersection of hardware and software: writing bare-metal Ada firmware for STM32
+                        microcontrollers at AdaCore, leading avionics on Brown Rocketry's IREC-accepted rocket, and
+                        joining Brown's Interactive 3D Vision &amp; Learning Lab this summer to work on multi-camera
+                        capture systems in C++. I care about code that maps cleanly to the silicon it runs on —
+                        no HAL abstractions hiding the interesting parts.
+                    </p>
+                    <div class="hero-links">
+                        <a href="https://www.linkedin.com/in/margeaux-c-559142303/" target="_blank" class="btn-outline">LinkedIn</a>
+                        <a href="https://github.com/MargXX" target="_blank" class="btn-outline">GitHub</a>
+                        <a href="resume.pdf" target="_blank" class="btn-primary">Resume ↓</a>
+                        <a href="mailto:margeaux_corrigan@brown.edu" class="btn-outline">Email</a>
+                    </div>
+                </div>
+                <div class="hero-portrait">
+                    <img src="images/profile_pic.jpg" alt="Margeaux Corrigan">
                 </div>
             </div>
         </section>
@@ -83,7 +88,7 @@
                                 <h3>Rocket Payload Sensor System</h3>
                                 <span class="badge badge-complete">Complete</span>
                             </div>
-                            <p>Bare-metal Ada firmware for an RP2040-based multi-sensor rocket payload, mentored by AdaCore. Deployed on a live high-power launch — firmware logged continuously under real G-loads. Integrated SHT3x, BMP390, and LSM9DS1 over I2C at 100 Hz; implemented W25Q128 SPI flash for onboard data logging.</p>
+                            <p>Bare-metal Ada firmware for an RP2040-based multi-sensor rocket payload, mentored by AdaCore. Deployed on a live high-power launch — firmware logged continuously under real G-loads. Integrated BMP390 and LSM9DS1 over I2C at 100 Hz; implemented W25Q128 SPI flash for onboard data logging.</p>
                             <div class="project-tags">
                                 <span class="tag">RP2040</span>
                                 <span class="tag">Ada</span>
@@ -94,22 +99,40 @@
                         </div>
                     </div>
 
-                    <!-- FLIGHT COMPUTER -->
+                    <!-- BARE-METAL DRIVER STACK IN C -->
                     <div class="project-card">
-                        <div class="project-thumb">
-                            <img src="images/flight_computer_placeholder.jpg" alt="Flight computer PCB layout in KiCad" class="thumb-img" onerror="this.style.display='none'">
-                        </div>
+                        <div class="project-thumb"></div>
                         <div class="project-info">
                             <div class="project-header">
-                                <h3>Flight Computer</h3>
+                                <h3>Bare-Metal Driver Stack in C</h3>
                                 <span class="badge badge-inprogress">In Progress</span>
                             </div>
-                            <p>Bare-metal peripheral drivers in C — I2C, UART, GPIO, and SysTick — then a device driver for the LSM9DS1 IMU (open-sourced). PCB designed in KiCad, consolidating the payload's individual breakout boards into a unified layout. Pyrotechnic output control for deployment charges is in scope; the driver layer is being written to stand alone as a reusable open-source library.</p>
+                            <p>Bare-metal peripheral and device drivers in C for ARM Cortex-M targets — I2C, UART, and GPIO bus drivers, SysTick-based timing, and device drivers for the LSM9DS1 IMU and BMP390 barometer built on top. Hardware abstraction layer separates register definitions from driver logic, with consistent error handling and a unified API across the stack. Written without HAL libraries — every register access is explicit. Target hardware is the custom sensor board below.</p>
                             <div class="project-tags">
                                 <span class="tag">C</span>
+                                <span class="tag">ARM Cortex-M</span>
                                 <span class="tag">I2C</span>
                                 <span class="tag">UART</span>
+                                <span class="tag">Driver Design</span>
+                            </div>
+                            <span class="btn-secondary btn-disabled">Coming to GitHub</span>
+                        </div>
+                    </div>
+
+                    <!-- SENSOR BOARD -->
+                    <div class="project-card">
+                        <div class="project-thumb"></div>
+                        <div class="project-info">
+                            <div class="project-header">
+                                <h3>Sensor Board</h3>
+                                <span class="badge badge-planned">Planned</span>
+                            </div>
+                            <p>Custom PCB designed in KiCad — consolidates the rocket payload's sensor breakouts into a unified board. LSM9DS1 IMU and BMP390 barometer integrated on a single design with shared I2C bus, decoupling, and cleaned-up routing. Built as the target hardware for the bare-metal driver stack, closing the loop from peripheral driver to schematic to layout.</p>
+                            <div class="project-tags">
                                 <span class="tag">KiCad</span>
+                                <span class="tag">PCB Design</span>
+                                <span class="tag">I2C</span>
+                                <span class="tag">Schematic Capture</span>
                             </div>
                             <span class="btn-secondary btn-disabled">Coming to GitHub</span>
                         </div>

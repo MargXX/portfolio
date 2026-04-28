@@ -132,7 +132,31 @@ header {
     margin: 0 auto;
 }
 
-.hero-content { max-width: 660px; }
+.hero-inner {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    width: 100%;
+}
+
+.hero-content {
+    max-width: 580px;
+    flex: 1;
+}
+
+.hero-portrait {
+    flex-shrink: 0;
+}
+
+.hero-portrait img {
+    width: 210px;
+    height: 210px;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    border: 2px solid var(--accent);
+    box-shadow: 6px 6px 0 var(--border-hover);
+}
 
 .hero-eyebrow {
     color: var(--accent);
@@ -541,6 +565,17 @@ footer p {
     .hero {
         padding: calc(var(--nav-h) + 3rem) 1.5rem 3rem;
         align-items: flex-start;
+    }
+
+    .hero-inner {
+        flex-direction: column-reverse;
+        gap: 2rem;
+        align-items: flex-start;
+    }
+
+    .hero-portrait img {
+        width: 150px;
+        height: 150px;
     }
 
     .container { padding: 0 1.5rem; }
