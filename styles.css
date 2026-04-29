@@ -590,8 +590,8 @@ footer p {
     }
 
     .hero-portrait img {
-        width: 130px;
-        height: 130px;
+        width: 90vw;
+        height: 30vh;
     }
 
     .container { padding: 0 1.5rem; }
