@@ -38,6 +38,45 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+main {
+    position: relative;
+    z-index: 1;
+}
+
+/* =============================================
+   PARTICLES BACKGROUND
+   ============================================= */
+.particles-bg {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.particles-bg span {
+    position: absolute;
+    display: block;
+    opacity: 0;
+    animation-name: particleDrift, particleSpin;
+    animation-timing-function: linear, linear;
+    animation-iteration-count: infinite, infinite;
+    color: var(--accent-mid);
+    user-select: none;
+}
+
+@keyframes particleDrift {
+    0%   { translate: 0 105vh;              opacity: 0; }
+    8%   {                                  opacity: 0.18; }
+    92%  {                                  opacity: 0.12; }
+    100% { translate: var(--drift) -8vh;    opacity: 0; }
+}
+
+@keyframes particleSpin {
+    from { rotate: 0deg; }
+    to   { rotate: 360deg; }
+}
+
 /* =============================================
    NAV
    ============================================= */
@@ -507,6 +546,22 @@ section h2::after {
     border-color: var(--accent);
     background: var(--accent-dim);
 }
+
+.skills-seen-in {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-top: 0.55rem;
+    letter-spacing: 0.02em;
+    font-style: italic;
+}
+
+.skills-seen-in a {
+    color: var(--accent);
+    text-decoration: none;
+    font-style: normal;
+}
+
+.skills-seen-in a:hover { text-decoration: underline; }
 
 /* =============================================
    CONTACT

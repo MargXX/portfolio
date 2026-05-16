@@ -1,3 +1,33 @@
+/* ── Floating particles background ── */
+(function () {
+    const container = document.getElementById('particlesBg');
+    if (!container) return;
+
+    const symbols = ['✦', '✧', '✦', '+', '◆', '✧', '·', '✦', '+', '◆'];
+    const count = 36;
+
+    for (let i = 0; i < count; i++) {
+        const el = document.createElement('span');
+        el.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+
+        const size    = 0.6 + Math.random() * 1.1;       // rem
+        const dur     = 18  + Math.random() * 22;         // seconds, drift
+        const spinDur = 3   + Math.random() * 5;          // seconds per full rotation
+        const delay   = -(Math.random() * dur);            // stagger, pre-fill screen
+        const left    = Math.random() * 100;              // vw
+        const drift   = (Math.random() - 0.5) * 60;       // px horizontal wander
+
+        el.style.cssText = `
+            left: ${left}vw;
+            font-size: ${size}rem;
+            animation-duration: ${dur}s, ${spinDur}s;
+            animation-delay: ${delay}s, 0s;
+            --drift: ${drift}px;
+        `;
+        container.appendChild(el);
+    }
+}());
+
 /* ── Mobile nav toggle ── */
 const toggle = document.querySelector('.menu-toggle');
 const navMenu = document.querySelector('.nav-menu');
