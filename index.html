@@ -38,8 +38,9 @@
                 <ul class="nav-menu">
                     <li><a href="#hero">Home</a></li>
                     <li><a href="#projects">Projects</a></li>
-                    <li><a href="#experience">Experience</a></li>
                     <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#interests">Interests</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -84,7 +85,7 @@
                 <div class="projects-grid">
 
                     <!-- ROCKET PAYLOAD SENSOR SYSTEM -->
-                    <div class="project-card" id="proj-rocket">
+                    <div class="project-card expandable" id="proj-rocket">
                         <div class="project-thumb">
                             <img src="images/Rocket_Payload_Final_Programming.jpeg" alt="Rocket payload board with sensors mounted, photographed during final pre-launch programming session" class="thumb-img" onerror="this.style.display='none'">
                         </div>
@@ -92,20 +93,24 @@
                             <div class="project-header">
                                 <h3>Rocket Payload Sensor System</h3>
                                 <span class="badge badge-complete">Complete</span>
+                                <span class="expand-toggle" aria-hidden="true">↓</span>
                             </div>
-                            <p>Bare-metal Ada firmware for an RP2040-based multi-sensor rocket payload, mentored by AdaCore. Deployed on a live high-power launch — firmware logged continuously under real G-loads. Integrated BMP390 and LSM9DS1 over I2C at 100 Hz; implemented W25Q128 SPI flash for onboard data logging.</p>
-                            <div class="project-tags">
-                                <span class="tag">RP2040</span>
-                                <span class="tag">Ada</span>
-                                <span class="tag">I2C</span>
-                                <span class="tag">SPI</span>
+                            <p class="project-short">Ada firmware for an RP2040 rocket payload — logged sensor data live under real G-loads.</p>
+                            <div class="project-details">
+                                <p>Bare-metal Ada firmware for an RP2040-based multi-sensor rocket payload, mentored by AdaCore. Deployed on a live high-power launch — firmware logged continuously under real G-loads. Integrated BMP390 and LSM9DS1 over I2C at 100 Hz; implemented W25Q128 SPI flash for onboard data logging.</p>
+                                <div class="project-tags">
+                                    <span class="tag">RP2040</span>
+                                    <span class="tag">Ada</span>
+                                    <span class="tag">I2C</span>
+                                    <span class="tag">SPI</span>
+                                </div>
+                                <a href="https://github.com/Brown-Rocketry/IREC-2025-2026/tree/main/terrarium_pico" target="_blank" class="btn-secondary">View on GitHub</a>
                             </div>
-                            <a href="https://github.com/Brown-Rocketry/IREC-2025-2026/tree/main/terrarium_pico" target="_blank" class="btn-secondary">View on GitHub</a>
                         </div>
                     </div>
 
                     <!-- BARE-METAL DRIVER STACK IN C -->
-                    <div class="project-card" id="proj-drivers">
+                    <div class="project-card expandable" id="proj-drivers">
                         <div class="project-thumb">
                             <img src="images/driver_imports.png" alt="C driver stack header imports showing HAL abstraction layer structure" class="thumb-img" onerror="this.style.display='none'">
                         </div>
@@ -113,21 +118,25 @@
                             <div class="project-header">
                                 <h3>Bare-Metal Driver Stack in C</h3>
                                 <span class="badge badge-inprogress">In Progress</span>
+                                <span class="expand-toggle" aria-hidden="true">↓</span>
                             </div>
-                            <p>Bare-metal peripheral and device drivers in C for ARM Cortex-M targets — I2C, UART, and GPIO bus drivers, SysTick-based timing, and device drivers for the LSM9DS1 IMU and BMP390 barometer built on top. Hardware abstraction layer separates register definitions from driver logic, with consistent error handling and a unified API across the stack. Written without HAL libraries — every register access is explicit. Target hardware is the custom sensor board below.</p>
-                            <div class="project-tags">
-                                <span class="tag">C</span>
-                                <span class="tag">ARM Cortex-M</span>
-                                <span class="tag">I2C</span>
-                                <span class="tag">UART</span>
-                                <span class="tag">Driver Design</span>
+                            <p class="project-short">I2C, UART, and GPIO drivers for ARM Cortex-M written from scratch — no HAL.</p>
+                            <div class="project-details">
+                                <p>Bare-metal peripheral and device drivers in C for ARM Cortex-M targets — I2C, UART, and GPIO bus drivers, SysTick-based timing, and device drivers for the LSM9DS1 IMU and BMP390 barometer built on top. Hardware abstraction layer separates register definitions from driver logic, with consistent error handling and a unified API across the stack. Written without HAL libraries — every register access is explicit. Target hardware is the custom sensor board below.</p>
+                                <div class="project-tags">
+                                    <span class="tag">C</span>
+                                    <span class="tag">ARM Cortex-M</span>
+                                    <span class="tag">I2C</span>
+                                    <span class="tag">UART</span>
+                                    <span class="tag">Driver Design</span>
+                                </div>
+                                <a href="https://github.com/MargXX/Bare-Metal-Drivers" target="_blank" class="btn-secondary">View on GitHub</a>
                             </div>
-                            <a href="https://github.com/MargXX/Bare-Metal-Drivers" target="_blank" class="btn-secondary">View on GitHub</a>
                         </div>
                     </div>
 
                     <!-- SENSOR BOARD -->
-                    <div class="project-card" id="proj-sensor-board">
+                    <div class="project-card expandable" id="proj-sensor-board">
                         <div class="project-thumb">
                             <img src="images/kicad_schematic.png" alt="KiCad schematic for custom sensor board showing LSM9DS1 and BMP390 on shared I2C bus" class="thumb-img" onerror="this.style.display='none'">
                         </div>
@@ -135,20 +144,24 @@
                             <div class="project-header">
                                 <h3>Sensor Board</h3>
                                 <span class="badge badge-planned">Planned</span>
+                                <span class="expand-toggle" aria-hidden="true">↓</span>
                             </div>
-                            <p>Custom PCB designed in KiCad — consolidates the rocket payload's sensor breakouts into a unified board. LSM9DS1 IMU and BMP390 barometer integrated on a single design with shared I2C bus, decoupling, and cleaned-up routing. Built as the target hardware for the bare-metal driver stack, closing the loop from peripheral driver to schematic to layout.</p>
-                            <div class="project-tags">
-                                <span class="tag">KiCad</span>
-                                <span class="tag">PCB Design</span>
-                                <span class="tag">I2C</span>
-                                <span class="tag">Schematic Capture</span>
+                            <p class="project-short">Custom KiCad PCB consolidating rocket payload sensors onto a single unified board.</p>
+                            <div class="project-details">
+                                <p>Custom PCB designed in KiCad — consolidates the rocket payload's sensor breakouts into a unified board. LSM9DS1 IMU and BMP390 barometer integrated on a single design with shared I2C bus, decoupling, and cleaned-up routing. Built as the target hardware for the bare-metal driver stack, closing the loop from peripheral driver to schematic to layout.</p>
+                                <div class="project-tags">
+                                    <span class="tag">KiCad</span>
+                                    <span class="tag">PCB Design</span>
+                                    <span class="tag">I2C</span>
+                                    <span class="tag">Schematic Capture</span>
+                                </div>
+                                <span class="btn-secondary btn-disabled">Coming to GitHub</span>
                             </div>
-                            <span class="btn-secondary btn-disabled">Coming to GitHub</span>
                         </div>
                     </div>
 
                     <!-- BOBA MACHINE -->
-                    <div class="project-card">
+                    <div class="project-card expandable">
                         <div class="project-thumb">
                             <img src="images/Boba_Machine_CAD_Prototype.png" alt="CAD prototype of the boba machine dispensing mechanism showing servo-controlled valve layout" class="thumb-img" onerror="this.style.display='none'">
                         </div>
@@ -156,21 +169,25 @@
                             <div class="project-header">
                                 <h3>Boba Machine</h3>
                                 <span class="badge badge-inprogress">In Progress</span>
+                                <span class="expand-toggle" aria-hidden="true">↓</span>
                             </div>
-                            <p>ESP32-driven boba dispenser: the firmware manages a servo control loop that holds each valve open precisely long enough to dispense the correct ingredient volume. Students order via a Wi-Fi web interface and rate their drink 1–5; a gradient descent optimizer runs server-side, learning from ratings to tune ingredient ratios over time.</p>
-                            <div class="project-tags">
-                                <span class="tag">ESP32</span>
-                                <span class="tag">Wi-Fi</span>
-                                <span class="tag">Servo Motors</span>
-                                <span class="tag">Web Interface</span>
-                                <span class="tag">Gradient Descent</span>
+                            <p class="project-short">ESP32 boba dispenser with a Wi-Fi ordering interface and a gradient descent recipe optimizer.</p>
+                            <div class="project-details">
+                                <p>ESP32-driven boba dispenser: the firmware manages a servo control loop that holds each valve open precisely long enough to dispense the correct ingredient volume. Students order via a Wi-Fi web interface and rate their drink 1–5; a gradient descent optimizer runs server-side, learning from ratings to tune ingredient ratios over time.</p>
+                                <div class="project-tags">
+                                    <span class="tag">ESP32</span>
+                                    <span class="tag">Wi-Fi</span>
+                                    <span class="tag">Servo Motors</span>
+                                    <span class="tag">Web Interface</span>
+                                    <span class="tag">Gradient Descent</span>
+                                </div>
+                                <a href="https://github.com/MargXX/Perfect-Boba" target="_blank" class="btn-secondary">View on GitHub</a>
                             </div>
-                            <a href="https://github.com/MargXX/Perfect-Boba" target="_blank" class="btn-secondary">View on GitHub</a>
                         </div>
                     </div>
 
                     <!-- TEMPERATURE-CONTROLLED FAN -->
-                    <div class="project-card">
+                    <div class="project-card expandable">
                         <div class="project-thumb">
                             <img src="images/Arduino_Internal_wiring.jpg" alt="Arduino breadboard wiring for temperature-controlled fan showing sensor and display connections" class="thumb-img" onerror="this.style.display='none'">
                         </div>
@@ -178,18 +195,64 @@
                             <div class="project-header">
                                 <h3>Temperature-Controlled Fan</h3>
                                 <span class="badge badge-complete">Complete</span>
+                                <span class="expand-toggle" aria-hidden="true">↓</span>
                             </div>
-                            <p>Embedded system that reads a temperature sensor and drives a fan and LED display via Arduino firmware. Built and debugged the full hardware circuit integrating sensor, display module, and microcontroller control logic.</p>
-                            <div class="project-tags">
-                                <span class="tag">Arduino</span>
-                                <span class="tag">C++</span>
-                                <span class="tag">PWM</span>
-                                <span class="tag">Temperature Sensor</span>
+                            <p class="project-short">Arduino system that reads a temperature sensor and drives a fan and LED display.</p>
+                            <div class="project-details">
+                                <p>Embedded system that reads a temperature sensor and drives a fan and LED display via Arduino firmware. Built and debugged the full hardware circuit integrating sensor, display module, and microcontroller control logic.</p>
+                                <div class="project-tags">
+                                    <span class="tag">Arduino</span>
+                                    <span class="tag">C++</span>
+                                    <span class="tag">PWM</span>
+                                    <span class="tag">Temperature Sensor</span>
+                                </div>
+                                <span class="btn-secondary btn-disabled">No repo</span>
                             </div>
-                            <span class="btn-secondary btn-disabled">No repo</span>
                         </div>
                     </div>
 
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ ADDITIONAL SKILLS ═══ -->
+        <section id="skills" class="skills">
+            <div class="container">
+                <h2>Additional Skills</h2>
+                <p class="section-sub">Tools and languages beyond what's shown in the project cards above.</p>
+
+                <div class="skills-group">
+                    <p class="skills-label">CAD &amp; FABRICATION</p>
+                    <div class="skills-chips">
+                        <span class="skill-chip">SolidWorks</span>
+                        <span class="skill-chip">Fusion 360</span>
+                        <span class="skill-chip">Onshape</span>
+                        <span class="skill-chip">FEA</span>
+                        <span class="skill-chip">3D printing</span>
+                        <span class="skill-chip">sheet metal fabrication</span>
+                        <span class="skill-chip">CAM</span>
+                        <span class="skill-chip">soldering</span>
+                    </div>
+                </div>
+
+                <div class="skills-group">
+                    <p class="skills-label">DATA &amp; SCRIPTING</p>
+                    <div class="skills-chips">
+                        <span class="skill-chip">Python</span>
+                        <span class="skill-chip">NumPy</span>
+                        <span class="skill-chip">Pandas</span>
+                        <span class="skill-chip">Matplotlib</span>
+                    </div>
+                </div>
+
+                <div class="skills-group">
+                    <p class="skills-label">COURSEWORK</p>
+                    <div class="skills-chips">
+                        <span class="skill-chip">MATLAB</span>
+                        <span class="skill-chip">Java</span>
+                        <span class="skill-chip">OCaml</span>
+                        <span class="skill-chip">Racket</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -199,7 +262,8 @@
             <div class="container">
                 <h2>Experience</h2>
                 <p class="section-sub">
-                    <a href="images/resume.pdf" target="_blank" class="inline-link">Full resume here ↓</a>
+                    A quick summary of my technical roles —
+                    <a href="images/resume.pdf" target="_blank" class="inline-link">full resume here ↓</a>
                 </p>
 
                 <div class="timeline">
@@ -229,30 +293,6 @@
                     </div>
 
                     <div class="timeline-item">
-                        <div class="timeline-date">Mar 2026 — Present</div>
-                        <div class="timeline-content">
-                            <h3>Brown Space Engineering <span class="role">— Antenna Team</span></h3>
-                            <p>Designing communications antennas (Nitinol dipole, copper patch), establishing feed architecture, impedance matching strategy, and EMC constraints on adjacent and connected hardware.</p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-date">Sep 2025 — Present</div>
-                        <div class="timeline-content">
-                            <h3>AI &amp; Robotics Ethics Society <span class="role">— Research Team</span></h3>
-                            <p>Designing a survey and assessment to evaluate the effectiveness of Brown's Socially Responsible Computing curriculum. Collaborating with the CS Department and teaching assistants to collect and analyze student feedback.</p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-date">May 2024 — Oct 2025</div>
-                        <div class="timeline-content">
-                            <h3>Persistence Labs <span class="role">— Strategy Intern</span></h3>
-                            <p>Facilitated beta testing across 10+ iterations with high school control groups; synthesized findings into reports presented to the founder/CEO to guide UI and product decisions.</p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
                         <div class="timeline-date">May 2024 — Sep 2025</div>
                         <div class="timeline-content">
                             <h3>Project Amplify <span class="role">— Founder &amp; Director</span></h3>
@@ -266,64 +306,40 @@
             </div>
         </section>
 
-        <!-- ═══ SKILLS ═══ -->
-        <section id="skills" class="skills">
+        <!-- ═══ INTERESTS ═══ -->
+        <section id="interests" class="interests">
             <div class="container">
-                <h2>Skills</h2>
-
-                <div class="skills-group">
-                    <p class="skills-label">EMBEDDED SYSTEMS</p>
-                    <div class="skills-chips">
-                        <span class="skill-chip">bare-metal firmware</span>
-                        <span class="skill-chip">RP2040</span>
-                        <span class="skill-chip">STM32</span>
-                        <span class="skill-chip">register-level programming</span>
-                        <span class="skill-chip">I2C</span>
-                        <span class="skill-chip">SPI</span>
-                        <span class="skill-chip">UART</span>
-                        <span class="skill-chip">hardware bring-up</span>
-                        <span class="skill-chip">ARM SVD / XML</span>
+                <h2>Outside the Lab</h2>
+                <div class="interests-grid">
+                    <div class="interest-card">
+                        <span class="interest-icon">📻</span>
+                        <h3>Ham Radio</h3>
+                        <p>Working toward my Technician license this summer — got into it for the RF theory and antenna design. The exam can't come fast enough.</p>
                     </div>
-                    <p class="skills-seen-in">&#x21B3; seen in: <a href="#proj-rocket">Rocket Payload Sensor System</a> &middot; <a href="#proj-drivers">Bare-Metal Driver Stack</a> &middot; <a href="#experience">AdaCore</a></p>
-                </div>
-
-                <div class="skills-group">
-                    <p class="skills-label">HARDWARE &amp; EDA</p>
-                    <div class="skills-chips">
-                        <span class="skill-chip">KiCad</span>
-                        <span class="skill-chip">schematic design</span>
-                        <span class="skill-chip">soldering</span>
-                        <span class="skill-chip">SolidWorks</span>
-                        <span class="skill-chip">Fusion 360</span>
-                        <span class="skill-chip">Onshape</span>
-                        <span class="skill-chip">FEA</span>
-                        <span class="skill-chip">3D printing</span>
-                        <span class="skill-chip">sheet metal fabrication</span>
-                        <span class="skill-chip">CAM</span>
+                    <div class="interest-card">
+                        <span class="interest-icon">🍵</span>
+                        <h3>Boba</h3>
+                        <p>I know every spot worth knowing. The boba machine project is partly about engineering and partly about never having to settle for a mediocre drink.</p>
                     </div>
-                    <p class="skills-seen-in">&#x21B3; seen in: <a href="#proj-sensor-board">Sensor Board</a> &middot; <a href="#experience">Brown Rocketry avionics</a></p>
-                </div>
-
-                <div class="skills-group">
-                    <p class="skills-label">LANGUAGES</p>
-                    <div class="skills-chips">
-                        <span class="skill-chip">C / C++</span>
-                        <span class="skill-chip">Ada</span>
-                        <span class="skill-chip">Python</span>
-                        <span class="skill-chip">NumPy</span>
-                        <span class="skill-chip">Pandas</span>
-                        <span class="skill-chip">Matplotlib</span>
+                    <div class="interest-card">
+                        <span class="interest-icon">🍞</span>
+                        <h3>Cooking from Scratch</h3>
+                        <p>I like cooking things that take real effort — bread, homemade pasta, anything where the process matters. Recipes are just specs with tolerance ranges.</p>
                     </div>
-                    <p class="skills-seen-in">&#x21B3; seen in: <a href="#proj-drivers">Bare-Metal Driver Stack</a> &middot; <a href="#proj-rocket">Rocket Payload Sensor System</a> &middot; <a href="#experience">Project Amplify</a></p>
-                </div>
-
-                <div class="skills-group">
-                    <p class="skills-label">COURSEWORK &amp; OTHER</p>
-                    <div class="skills-chips">
-                        <span class="skill-chip">MATLAB</span>
-                        <span class="skill-chip">Java</span>
-                        <span class="skill-chip">OCaml</span>
-                        <span class="skill-chip">Racket</span>
+                    <div class="interest-card">
+                        <span class="interest-icon">📚</span>
+                        <h3>Reading</h3>
+                        <p>Translated Korean, Chinese, and Japanese novels — web novels, light novels, whatever's been picked up by a good translator. Always have something in progress.</p>
+                    </div>
+                    <div class="interest-card">
+                        <span class="interest-icon">🪘</span>
+                        <h3>Plate Spinning</h3>
+                        <p>Literally spinning plates on sticks. It's a surprisingly good full-body workout and I find the focus it requires genuinely meditative.</p>
+                    </div>
+                    <div class="interest-card">
+                        <span class="interest-icon">🎳</span>
+                        <h3>Casual Bowling</h3>
+                        <p>Emphasis on casual. I'm in it for the shoes and the snacks.</p>
                     </div>
                 </div>
             </div>

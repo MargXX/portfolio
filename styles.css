@@ -364,6 +364,43 @@ section h2::after {
     box-shadow: 0 8px 28px rgba(139, 108, 247, 0.10);
 }
 
+/* expandable cards */
+.project-card.expandable {
+    cursor: pointer;
+}
+
+.project-card.expandable .project-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.3s ease;
+    opacity: 0;
+}
+
+.project-card.expandable.expanded .project-details {
+    max-height: 600px;
+    opacity: 1;
+}
+
+.project-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-top: 0.5rem;
+}
+
+.expand-toggle {
+    margin-left: auto;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    transition: color 0.2s;
+    flex-shrink: 0;
+}
+
+.project-card.expandable:hover .expand-toggle,
+.project-card.expandable.expanded .expand-toggle {
+    color: var(--accent);
+}
+
 /* thumbnail */
 .project-thumb {
     width: 100%;
@@ -510,7 +547,7 @@ section h2::after {
 /* =============================================
    SKILLS
    ============================================= */
-.skills { background: var(--bg); border-top: 1px solid var(--border); }
+.skills { background: #fdfbff; border-top: 1px solid var(--border); }
 
 .skills-group {
     margin-bottom: 2rem;
@@ -562,6 +599,49 @@ section h2::after {
 }
 
 .skills-seen-in a:hover { text-decoration: underline; }
+
+/* =============================================
+   INTERESTS
+   ============================================= */
+.interests { background: var(--bg); border-top: 1px solid var(--border); }
+
+.interests-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+}
+
+.interest-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 1.5rem 1.25rem;
+    transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+}
+
+.interest-card:hover {
+    border-color: var(--border-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(139, 108, 247, 0.09);
+}
+
+.interest-icon {
+    font-size: 1.6rem;
+    display: block;
+    margin-bottom: 0.75rem;
+}
+
+.interest-card h3 {
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 0.4rem;
+}
+
+.interest-card p {
+    font-size: 0.85rem;
+    color: var(--text-dim);
+    line-height: 1.6;
+}
 
 /* =============================================
    CONTACT
@@ -677,6 +757,7 @@ footer p {
     .container { padding: 0 1.5rem; }
 
     .projects-grid { grid-template-columns: 1fr; }
+    .interests-grid { grid-template-columns: 1fr; }
 
     .timeline-item {
         grid-template-columns: 1fr;
