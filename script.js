@@ -12,7 +12,7 @@
 
         const size    = 0.6 + Math.random() * 1.1;       // rem
         const dur     = 18  + Math.random() * 22;         // seconds, drift
-        const spinDur = 3   + Math.random() * 5;          // seconds per full rotation
+        const spinDur = 6   + Math.random() * 10;         // seconds per full rotation
         const delay   = -(Math.random() * dur);            // stagger, pre-fill screen
         const left    = Math.random() * 100;              // vw
         const drift   = (Math.random() - 0.5) * 60;       // px horizontal wander
