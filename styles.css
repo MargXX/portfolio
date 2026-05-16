@@ -510,7 +510,7 @@ section h2::after {
 /* =============================================
    SKILLS
    ============================================= */
-.skills { background: var(--bg); border-top: 1px solid var(--border); }
+.skills { background: #fdfbff; border-top: 1px solid var(--border); }
 
 .skills-group {
     margin-bottom: 2rem;
@@ -562,6 +562,49 @@ section h2::after {
 }
 
 .skills-seen-in a:hover { text-decoration: underline; }
+
+/* =============================================
+   INTERESTS
+   ============================================= */
+.interests { background: var(--bg); border-top: 1px solid var(--border); }
+
+.interests-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+}
+
+.interest-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 1.5rem 1.25rem;
+    transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+}
+
+.interest-card:hover {
+    border-color: var(--border-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(139, 108, 247, 0.09);
+}
+
+.interest-icon {
+    font-size: 1.6rem;
+    display: block;
+    margin-bottom: 0.75rem;
+}
+
+.interest-card h3 {
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 0.4rem;
+}
+
+.interest-card p {
+    font-size: 0.85rem;
+    color: var(--text-dim);
+    line-height: 1.6;
+}
 
 /* =============================================
    CONTACT
@@ -677,6 +720,7 @@ footer p {
     .container { padding: 0 1.5rem; }
 
     .projects-grid { grid-template-columns: 1fr; }
+    .interests-grid { grid-template-columns: 1fr; }
 
     .timeline-item {
         grid-template-columns: 1fr;
